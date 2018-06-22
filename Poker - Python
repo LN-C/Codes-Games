@@ -1,0 +1,52 @@
+import random
+
+palos = ["h","d","c","s"]
+rangos = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
+
+# Generamos el mazo de las 52 cartas
+mazo = list(zip(palos * len(rangos), rangos* len(palos)))
+
+jugador1 = []
+jugador2 = []
+# Desordenamos el mazo
+random.shuffle(mazo)
+
+jugador1.extend([mazo.pop(), mazo.pop()])
+jugador2.extend([mazo.pop(), mazo.pop()])
+
+print("Cartas jugador 1: {0}".format(jugador1))
+print("Cartas jugador 2: {0}".format(jugador2))
+
+#creamos la canasta de apuestas
+canasta=[]
+
+#creamos lista de las cartas del medio
+cartasm=[]
+
+#preguntamos al primer jugador
+print("")
+pregunta=input("Jugador 1: si deseas retirarte escribe 'r' si deseas apostar 200$ escribe 'a': ")
+if pregunta=="a":
+    canasta.append(200)
+    
+if pregunta=="r":
+    print("")
+    print("Ay, tus cartas no eran buenas, suerte para la proxima")
+
+#preguntamos al segundo jugador
+print("")
+preg=input("Jugador 2: si deseas retirarte escribe 'r' si deseas apostar 200$ escribe 'a': ")
+if pregunta=="a":
+    canasta.append(200)
+    print("")
+    print("Canasta:", canasta)
+
+    #Llenamos esa lista con 5 cartas
+    random.shuffle(mazo)
+    cartasm.append([mazo.pop(), mazo.pop(),mazo.pop(),mazo.pop(),mazo.pop()])
+    print("")
+    print("Cartas del medio: ", cartasm)
+
+if pregunta=="r":
+    print("")
+    print("Ay, tus cartas no eran buenas, suerte para la proxima")
