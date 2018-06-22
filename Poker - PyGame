@@ -1,0 +1,22 @@
+import pygame
+import time
+import sys
+import random
+
+numero_de_cartas= 52
+color_verde=(0,168,107)
+ancho=1280
+largo=667
+
+def main():
+    pygame.init()
+    pantalla=pygame.display.set_mode((ancho,largo))
+    pantalla.fill(color_verde)
+    pygame.display.set_caption('Poker')
+    
+    while True:
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                sys.exit()
+                return 
+        pygame.display.flip()
