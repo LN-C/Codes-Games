@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int x1, y1, x2, y2, d1, d2;
+    float d, pmx, pmy;
+    cout << "Ingrese coordenada x1: ";
+    cin >> x1;
+    cout << "Ingrese coordenada y1: ";
+    cin >> y1;
+    cout << "Ingrese coordenada x2: ";
+    cin >> x2;
+    cout << "Ingrese coordenada y2: ";
+    cin >> y2;
+    d1 = pow((x2 - x1), 2);
+    d2 = pow((y2 -y1), 2);
+    d = sqrt(d1 + d2);
+    pmx = (x1 + x2)/2;
+    pmy= (y1 + y2)/2;
+
+    cout<<"La distancia entre dos puntos: " << d << endl;
+    cout << "El punto medio de los puntos: " << "(" << pmx << "," << pmy << ")" << endl;
+
+    return 0;
+
+}
