@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+const float pi = 3.141516;
+
+int main()
+{
+    float cen, rad;
+    rad = (cen*pi)/180;
+    cout << "Ingrese grados en centigrados: ";
+    cin >> cen;
+    cout << "El ángulo en radianes es: ";
+    cout << fixed << setprecision(1) << rad;
+
+    return 0;
+
+}
