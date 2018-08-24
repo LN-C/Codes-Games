@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    int n,c24,c12,c6,s;
+    cout<< "Número de colores: ";cin>> n;
+    c24=n/24;n=n%24;
+    c12=n/12;n=n%12;
+    c6=n/6;s=n%6;
+
+    cout<<"El número de cajas de 24 es: " <<c24 << endl;
+    cout << "El número de cajas de 12 es: " <<c12 << endl;
+    cout <<  "El número de cajas de 6 es: " <<c6 << endl;
+    cout << "El número de colores sobrantes: " << s;
+
+}
