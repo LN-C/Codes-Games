@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int consumo;
+    float montoreg = 0.4522, montoex = 0.7;
+    cout << "Ingrese consumo en Kw: ";
+    cin >> consumo;
+    if((consumo<100)){
+        cout << "El monto a pagar es: " << consumo*montoreg;
+    }
+    else{
+        cout << "El monto a pagar es; " << consumo*montoex;
+    }
+    return 0;
+}
