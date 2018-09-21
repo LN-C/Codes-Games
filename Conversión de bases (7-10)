@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+  int n;
+  cout << "Ingrese número en base 7: "; cin >> n;
+  int producto;
+  int exp = 0;
+  int suma = 0;
+  while (n>0){
+    int r=n%10;
+    n/=10;
+    producto = r*pow(7, exp);
+    suma += producto;
+    exp++;
+  }
+  cout << "Número en base 10: " << suma;
+  return 0; 
+}
